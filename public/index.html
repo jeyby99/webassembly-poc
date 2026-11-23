@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+  <body>
+    <h1 id="message">Loading...</h1>
+    <script>
+      WebAssembly.instantiateStreaming(fetch("hello.wasm")).then(({ instance }) => {
+        const { memory, length } = instance.exports;
+        const bytes = new Uint8Array(memory.buffer, 0, length());
+        document.getElementById("message").textContent = new TextDecoder().decode(bytes);
+      });
+    </script>
+  </body>
+</html>

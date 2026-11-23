@@ -1,0 +1,14 @@
+{
+  "name": "webassembly-poc",
+  "version": "1.0.0",
+  "description": "Hello World in WebAssembly",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node run.js",
+    "serve": "node server.js"
+  },
+  "devDependencies": {
+    "wabt": "^1.0.37"
+  },
+  "license": "MIT"
+}
