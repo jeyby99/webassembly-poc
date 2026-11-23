@@ -30,11 +30,22 @@ Source code (C / Rust / WAT) --(compiler)--> .wasm file --(browser or runtime)--
 - **Plugins**: safe, portable extensions (for example Envoy proxy filters).
 - **Outside the browser**: runtimes like Wasmtime and Wasmer, and WASI (the WebAssembly System Interface) let Wasm run anywhere.
 
-## 4. Who created it and who uses it?
+## 4. Who created it and who implements it?
 
 - **Creators**: designed by engineers from **Mozilla, Google, Microsoft and Apple**, building on Mozilla's asm.js and Google's Native Client. Key names include Luke Wagner and Alon Zakai (Mozilla). The first public version (MVP) shipped in all major browsers in 2017.
 - **Standard**: developed by the W3C WebAssembly Working Group. It became an official W3C Recommendation in December 2019.
 - **Who uses it**: Figma, Google (Earth, Meet), Adobe (Photoshop on the web), Autodesk, Cloudflare, Shopify and many others.
+
+**Where it is implemented (examples):**
+
+| Who | How they implement it |
+|---|---|
+| **Browsers** (Chrome, Firefox, Safari, Edge) | Built-in Wasm engines (V8, SpiderMonkey, JavaScriptCore). |
+| **Figma** | Its rendering engine is C++ compiled to WebAssembly. |
+| **Google Earth, Google Meet** | Heavy 3D and video processing in Wasm. |
+| **Adobe** | Photoshop on the web runs C++ code compiled to Wasm. |
+| **Cloudflare, Fastly, Fermyon** | Run Wasm modules on the server and at the edge. |
+| **Runtimes** (Wasmtime, Wasmer, Node.js) | Execute Wasm outside the browser. |
 
 ## 5. The POC
 
